@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Medicine Reminder</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="site-title">Medicine Reminder</h1>
+            <nav>
+                <ul class="nav-links">
+                    <!-- Left-aligned links -->
+                    <div class="nav-links-left">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </div>
+                    
+                    <!-- Right-aligned buttons -->
+                    <div class="nav-links-right" id="auth-buttons">
+                        <li><a href="signup.html" class="btn">Sign Up</a></li>
+                        <li><a href="login.html" class="btn">Log In</a></li>
+                    </div>
+                    <div id="profile-icon" style="display: none;">
+                        <img src="xaxaxa.png" alt="Account" class="profile-img" onclick="toggleProfileDropdown()">
+                        <div id="profile-dropdown" class="dropdown-content" style="display: none;">
+                            <a>Welcome</a> <p id="username-display"></p>
+                            <button onclick="logout()">Log Out</button>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="profile-icon" style="display: none;">
+        <img src="xaxaxa.png" alt="Account" class="profile-img" onclick="toggleProfileDropdown()">
+        <div id="profile-dropdown" class="dropdown-content" style="display: none;">
+            <p id="username-display"></p>
+            <button onclick="logout()">Log Out</button>
+        </div>
+    </div>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Stay on Track with Your Medications</h2>
+                <p>Never miss a dose again! Get timely reminders and manage your health effectively.</p>
+                <a href="#signup" class="btn">Get Started</a>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="feature-grid">
+                    <div class="feature" onclick="openModal('reminderModal')">
+                        <img src="noto1.png" alt="Reminder">
+                        <h3>Reminders</h3>
+                        <p>Set customizable reminders for your medications.</p>
+                    </div>
+                    <div class="feature" onclick="openModal('profileModal')">
+                        <img src="profile1.png" alt="Profile">
+                        <h3>User Profile</h3>
+                        <p>Manage your personal health information and preferences.</p>
+                    </div>
+                    <div class="feature" onclick="openModal('notificationsModal')">
+                        <img src="bell1.png" alt="Notifications">
+                        <h3>Notifications</h3>
+                        <p>Receive alerts via SMS or email for your scheduled doses.</p>
+                    </div>
+                    <div class="feature" onclick="openModal('historyModal')">
+                        <img src="history1.png" alt="History">
+                        <h3>History Tracking</h3>
+                        <p>Keep track of your medication history and compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modals for Each Feature -->
+        <div id="reminderModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('reminderModal')">&times;</span>
+                <h3>Reminders</h3>
+                <p>Set customizable reminders for each medication you take. Choose the time, frequency, and method of notifications.</p>
+            </div>
+        </div>
+        
+        <div id="profileModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('profileModal')">&times;</span>
+                <h3>User Profile</h3>
+                <p>Manage your personal health information and preferences. Customize your reminders, dosage information, and more.</p>
+            </div>
+        </div>
+        
+        <div id="notificationsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('notificationsModal')">&times;</span>
+                <h3>Notifications</h3>
+                <p>Receive alerts via SMS or email for your scheduled doses to stay on track with your medication regimen.</p>
+            </div>
+        </div>
+        
+        <div id="historyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('historyModal')">&times;</span>
+                <h3>History Tracking</h3>
+                <p>Keep a detailed record of your medication history, including past doses and compliance rates.</p>
+            </div>
+        </div>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Our mission is to help individuals manage their medications with ease and confidence. We believe that everyone deserves to stay healthy and informed.</p>
+                
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>If you have any questions, feel free to reach out!</p>
+                <p>Email: support@medicinereminder.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Medicine Reminder. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
